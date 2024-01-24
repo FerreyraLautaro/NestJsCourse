@@ -1,3 +1,4 @@
+import axiso from 'axios'
 // export class Pokemon {
 //       public id: number;
 //       public name: string;
@@ -19,14 +20,22 @@ export class Pokemon {
     public name: string,
   ) {}
 
+    
     scream () {
       console.log(`${this.name.toUpperCase()} !!!`);
     }
     speak () {
-      console.log(`${this.name} , this.name!`);
+      console.log(`${this.name} , ${this.name}!`);
     }
+    async getMoves() {
+      const { data } = await axiso.get('https://pokeapi.co/api/v2/pokemon/4')
+      console.log( data.moves );
+   }
+
 }
 export const charmander = new Pokemon(
   1,
   "Charmander",
 );
+
+

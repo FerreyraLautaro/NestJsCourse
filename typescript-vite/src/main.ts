@@ -3,7 +3,8 @@ import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 //import { name } from './bases/01-types.ts'
-import { /*bulbasur,*/ pokemons } from './bases/02-objects.ts'
+//import { /*bulbasur,*/ pokemons } from './bases/02-objects.ts'
+import { charmander } from './bases/03-calsses.ts'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -17,7 +18,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <button id="counter" type="button"></button>
     </div>
     <p class="read-the-docs">
-      ${pokemons.join(",")} Click on the Vite and TypeScript logos to learn more
+      ${charmander.getMoves()} Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
 `
